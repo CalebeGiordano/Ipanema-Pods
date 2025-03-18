@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoções Imperdíveis - Ipanema Pods</title>
+    <style>
+        /* Reset de margens e padding */
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .content {
+            padding: 50px;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        /* Estilo da seção de promoções */
+        .promo-section {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        .promo-card {
+            width: 280px;
+            height: 400px; /* Aumentei a altura para acomodar o botão */
+            background-color: #ffcc00;
+            border-radius: 10px;
+            box-shadow: 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease;
+            margin: 10px;
+        }
+
+        .promo-card img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .promo-card h3 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .promo-card p {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .promo-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Estilo do botão "Tenho Interesse Nesse" */
+        .interest-button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .interest-button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <h1>Promoções Imperdíveis</h1>
+            <p>Aproveite as promoções incríveis que preparamos para você!</p>
+        </header>
+
+        <!-- Seção de Promoções -->
+        <div class="promo-section">
+            <div class="promo-card">
+                <img src="img/V250.png" alt="Promoção 1">
+                <h3>Promoção 1</h3>
+                <p>Desconto imperdível no modelo V250!</p>
+                <button class="interest-button">Tenho Interesse Nesse</button>
+            </div>
+
+            <div class="promo-card">
+                <img src="img/V150.png" alt="Promoção 2">
+                <h3>Promoção 2</h3>
+                <p>Aproveite até 50% OFF no V150!</p>
+                <button class="interest-button">Tenho Interesse Nesse</button>
+            </div>
+
+            <div class="promo-card">
+                <img src="img/V120.png" alt="Promoção 3">
+                <h3>Promoção 3</h3>
+                <p>Leve o V120 com preço promocional!</p>
+                <button class="interest-button">Tenho Interesse Nesse</button>
+            </div>
+        </div>
+
+        <div class="promo-section">
+            <!-- Você pode adicionar mais cards de promoções aqui -->
+            <div class="promo-card">
+                <img src="img/V250.png" alt="Promoção 4">
+                <h3>Promoção 4</h3>
+                <p>Leve 2 V250 por um preço especial!</p>
+                <button class="interest-button">Tenho Interesse Nesse</button>
+            </div>
+
+            <div class="promo-card">
+                <img src="img/V150.png" alt="Promoção 5">
+                <h3>Promoção 5</h3>
+                <p>Desconto de 30% no modelo V150!</p>
+                <button class="interest-button">Tenho Interesse Nesse</button>
+            </div>
+
+            <div class="promo-card">
+                <img src="img/V120.png" alt="Promoção 6">
+                <h3>Promoção 6</h3>
+                <p>Ganhe um V120 de graça em compras selecionadas!</p>
+                <button class="interest-button">Tenho Interesse Nesse</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a href="index.html">Voltar para a Página Principal</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+        <a href="#">Termos e Condições</a>
+        <p>&copy; 2025 IpanemaPods. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

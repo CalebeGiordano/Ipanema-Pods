@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ipanema Pods</title>
+    <style>
+        /* Reset de margens e padding */
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilo para o fundo e o efeito parallax */
+        .parallax {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('img/ipanema.jpg'); /* Ajuste o caminho da imagem */
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+            transform: translateX(0);
+            transition: transform 0.3s ease-out;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            color: #fffbfb;
+            padding: 50px;
+        }
+
+        header {
+            text-align: center;
+            margin-top: 150px;
+            color: #fff;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            font-weight: bold;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        .product-section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        .product {
+            width: 280px;
+            margin: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-info {
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .product-info h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .product-info p {
+            font-size: 1rem;
+            color: #ddd;
+        }
+
+        .product:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Estilo da seção de promoções */
+        .promo-section {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+            padding: 20px;
+            flex-wrap: wrap; /* Isso ajuda a manter a responsividade */
+        }
+
+        .promo-card {
+            width: 280px;
+            height: 350px;
+            background-color: #ffcc00;
+            border-radius: 10px;
+            box-shadow: 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease;
+            margin: 10px;
+        }
+
+        .promo-card img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .promo-card h3 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .promo-card p {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .promo-card:hover {
+            transform: translateY(-10px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parallax" id="parallax"></div>
+    <div class="content">
+        <header>
+            <h1>Bem-vindo à Ipanema Pods</h1>
+            <p>Explore os melhores sabores de pods já visto.</p>
+        </header>
+
+        <div class="product-section">
+            <div class="product">
+                <img src="img/V250.png" alt="Pod 1"> <!-- Verifique o caminho da imagem -->
+                <div class="product-info">
+                    <h3>Ignite V250 (25k) </h3>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="img/V150.png" alt="Pod 2"> <!-- Verifique o caminho da imagem -->
+                <div class="product-info">
+                    <h3>Ignite V150</h3>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="img/V120.png" alt="Pod 3"> <!-- Verifique o caminho da imagem -->
+                <div class="product-info">
+                    <h3>Ignite V120</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de Promoções -->
+        <div class="promo-section">
+            <div class="promo-card">
+                <img src="img/V250.png" alt="Promoção 1"> <!-- Verifique o caminho da imagem -->
+                <h3>Promoção 1</h3>
+                <p>Desconto imperdível no modelo V250!</p>
+            </div>
+
+            <div class="promo-card">
+                <img src="img/V150.png" alt="Promoção 2"> <!-- Verifique o caminho da imagem -->
+                <h3>Promoção 2</h3>
+                <p>Aproveite até 50% OFF no V150!</p>
+            </div>
+
+            <div class="promo-card">
+                <img src="img/V120.png" alt="Promoção 3"> <!-- Verifique o caminho da imagem -->
+                <h3>Promoção 3</h3>
+                <p>Leve o V120 com preço promocional!</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const parallax = document.getElementById("parallax");
+            const scrollPosition = window.scrollY;
+            parallax.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+        });
+    </script>
+</body>
+
+<footer>
+    <a href="#">Sobre</a>
+    <a href="#">Contato</a>
+    <a href="#">Termos e Condições</a>
+    <p>&copy; 2025 IpanemaPods. Todos os direitos reservados.</p>
+</footer>
+
+</html>
